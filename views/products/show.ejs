@@ -1,0 +1,53 @@
+<%- include("../partials/header") %>
+
+<!-- //displaying the msg of flash here -->
+<%- include("../partials/flash") %>
+<div>
+  <a href="/products" class="back-btn">
+    <i class="fas fa-angle-double-left"></i
+  ></a>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6">
+        <div class="card" style="width: 20rem; height: 485px; width: 350px">
+          <form
+            action="/products/<%=product._id%>?_method=DELETE"
+            method="POST"
+          >
+            <button class="delete-btn">
+              <i class="fas fa-trash-alt"></i>
+            </button>
+          </form>
+
+          <img
+            src="<%= product.image %> "
+            class="card-img-top"
+            alt="..."
+            style="height: 270px"
+          />
+          <div class="card-body">
+            <h5 class="card-title"><%= product.name %></h5>
+            <h5 class="card-title price">₹<%= product.price %></h5>
+            <p class="card-text"><%= product.desc %></p>
+            <a href="#" class="btn btn-success"> Buy</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-6">
+        <div class="btns">
+          <a href="#" class="btn btn-danger buy-btn"> Cancel</a>
+
+          <a href="#" class="btn btn-success buy-btn"> Buy Now</a>
+        </div>
+        <div class="review-div">
+          <label>Any product reviews? </label>
+          <br />
+          <textarea name="review" style="height: 70px; width: 350px"></textarea>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<%- include("../partials/footer") %>

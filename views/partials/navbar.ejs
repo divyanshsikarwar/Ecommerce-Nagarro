@@ -1,0 +1,66 @@
+<nav
+  class="navbar navbar-expand-lg navbar-dark"
+  style="background-color: #3fa796"
+>
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/products" style="color: black">E-Commerce</a>
+
+    <button
+      style="color: black"
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarTogglerDemo02"
+      aria-controls="navbarTogglerDemo02"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+      <div class="navbar-nav mr-auto ">
+        <!-- //using the current user via middle ware where error and suceess are shown -->
+        <% if(!currentUser){ %>
+        <a href="/login" style="color: black" class="nav-link active">Login</a>
+        <% } %> <%if(currentUser) {%>
+        <!--else nhi chalta error show krta h uisliye use if again-->
+
+        <a href="#" style="color: black" class="nav-link active text-capitalize"
+          >Hello <%= currentUser.username %>
+        </a>
+       
+        <% } %>
+      </div>
+      <div class="navbar-nav float-right ml-auto" style="float:right !important"></div>
+      <ul class="navbar-nav mb-lg-0  ml-auto justify-content-end float-right">
+        <li class="nav-item">
+          <a
+            style="color: black"
+            class="nav-link active"
+            aria-current="page"
+            href="/products"
+            ><i class="fas fa-house-user"></i>
+          </a>
+        </li>
+
+        <li class="nav-item justify-content-end">
+          <a
+            style="color: black"
+            class="nav-link active"
+            href="/products/new"
+            tabindex="-1"
+            aria-disabled="true"
+            >Add Product</a
+          >
+        </li>
+        <li>
+          <a href="/logout" style="color: black" class="nav-link active"
+          ><i class="fas fa-power-off"></i
+        ></a>
+        </li>
+      </ul>
+      </div>
+    </div>
+  </div>
+</nav>

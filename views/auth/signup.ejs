@@ -1,0 +1,45 @@
+<%- include("../partials/header") %>
+
+<h1 style="text-align: center; color: rgba(255, 48, 155, 0.6)" class="heading">E Commerce</h1>
+
+<div class="container">
+  <%- include("../partials/flash") %>
+
+  <form class="validated-form" action="/register" method="POST" novalidate>
+    <div class="mb-3" style="font-weight: 600; color: rgba(255, 48, 155, 0.6)">
+      <label for="username" class="form-label">Username: </label>
+      <input
+        type="text"
+        class="form-control"
+        id="username"
+        placeholder="Enter Username "
+        name="username"
+        required
+      />
+    </div>
+    <div class="mb-3" style="font-weight: 600; color: rgba(255, 48, 155, 0.6)">
+      <label for="password" class="form-label">Password: </label>
+      <input
+        type="password"
+        class="form-control"
+        id="password"
+        placeholder="Enter Password"
+        name="password"
+        required
+      />
+
+      <label for="email" class="form-label">Email </label>
+      <input
+        type="email"
+        class="form-control"
+        id="email"
+        placeholder="Enter E-mail "
+        name="email"
+        required
+      />
+    </div>
+    <br />
+    <button type="submit" class="btn-login">Sign up</button>
+  </form>
+</div>
+<%- include("../partials/footer") %>
