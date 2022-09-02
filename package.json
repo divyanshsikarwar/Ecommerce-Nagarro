@@ -1,12 +1,12 @@
 {
-  "name": "e-commerce-website",
+  "name": "ecomm Nagarro",
   "version": "1.0.0",
   "description": "",
   "main": "app.js",
   "scripts": {
     "start": "nodemon ./app.js"
   },
-  "author": "kartik kapil",
+  "author": "Divyansh Sikarwar,
   "license": "ISC",
   "dependencies": {
     "connect-flash": "^0.1.1",
